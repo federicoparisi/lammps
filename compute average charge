@@ -2,12 +2,12 @@ with open('charges_elm', 'r') as file:
     lines = file.readlines()
 
 values = [float(line.strip()) for line in lines]
-sets_of_sixteen = [values[i:i+16] for i in range(0, len(values), 16)]
+sets = [values[i:i+16] for i in range(0, len(values), 16)]
 charge = 0
-#print(sets_of_sixteen[1][15])
+#print(sets[1][15])
 for i in range (17):
-    charge = charge + sets_of_sixteen[i][15]
-    print(sets_of_sixteen[i][15])
+    charge = charge + sets[i][15]
+    print(sets[i][15])
 
 #print(i)
 average_charge = charge/(i+1)
